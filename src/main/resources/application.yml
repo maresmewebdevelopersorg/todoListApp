@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: todoList
+  thymeleaf:
+    cache: false
+    mode: HTML
+  h2:
+    console:
+      enabled: true
+server:
+  port: 8080
