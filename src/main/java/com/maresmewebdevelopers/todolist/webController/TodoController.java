@@ -34,10 +34,7 @@ public class TodoController {
 
         this.toDoService.add(toDo);
 
-        model.addAttribute("toDoList", toDoService.getAll());
-        model.addAttribute("toDo", new ToDo());
-
-        return "todo";
+        return "redirect:/todo";
     }
 
     @PostMapping("/delete")
