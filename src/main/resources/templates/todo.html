@@ -11,7 +11,7 @@
                     <i class="fa fa-plus" aria-hidden="true"></i> Añadir tarea
                 </div>
                 <div class="card-block">
-                    <form method="post" th:action="@{/todo/add}" th:object="${toDo}">
+                    <form method="post" th:action="@{/todo}" th:object="${toDo}">
                         <div th:class="${#fields.hasErrors('name')} ? 'form-group row has-danger' : (*{name == null} ? 'form-group row' : 'form-group row has-success')">
                             <label for="name" class="col-sm-3 col-form-label">Nombre</label>
                             <div class="col-sm-9">

@@ -25,7 +25,7 @@ public class TodoController {
         return "todo";
     }
 
-    @PostMapping("/add")
+    @PostMapping
     public String addTodo(@Valid ToDo toDo, Errors errors, Model model) {
         model.addAttribute("toDoList", toDoService.getAll());
 
@@ -45,9 +45,6 @@ public class TodoController {
 
         this.toDoService.deleteById(toDoId);
 
-        model.addAttribute("toDoList", toDoService.getAll());
-        model.addAttribute("toDo", new ToDo());
-
-        return "todo";
+        return "redirect:/todo";
     }
 }
