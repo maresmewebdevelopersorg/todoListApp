@@ -1,11 +1,21 @@
 spring:
   application:
     name: todoList
+  datasource:
+      url: jdbc:mysql://localhost:3306/todosbd?useSSL=false
+      username: root
+      password:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
   thymeleaf:
     cache: false
     mode: HTML
-  h2:
-    console:
-      enabled: true
 server:
   port: 8080
